@@ -1,0 +1,6 @@
+syntax = "proto2";
+
+message FawkesReq {
+    optional string appkey = 1;
+    optional string env = 2;
+}
