@@ -1,7 +1,7 @@
 '''
 作者: weimo
 创建日期: 2020-10-08 15:44:34
-上次编辑时间: 2020-10-08 21:22:01
+上次编辑时间: 2020-10-08 21:24:48
 一个人的命运啊,当然要靠自我奋斗,但是...
 '''
 import gzip
@@ -29,8 +29,6 @@ class Video(object):
 
     def __init__(self):
         self.url = "https://grpc.biliapi.net/bilibili.pgc.gateway.player.v1.PlayURL/PlayView"
-        self.method = "POST"
-        self.header = None
         self.config = Config()
 
     def get_headers(self):
