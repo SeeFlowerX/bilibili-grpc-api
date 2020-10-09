@@ -1,30 +1,26 @@
 '''
 作者: weimo
 创建日期: 2020-10-08 16:28:00
-上次编辑时间: 2020-10-08 21:21:32
+上次编辑时间: 2020-10-09 15:35:33
 一个人的命运啊,当然要靠自我奋斗,但是...
 '''
-import pathlib
+import sys
+
 from service.video import Video
+from service.subtitle import Subtitle
 
-def test_payload():
-    # 测试本地文件
-    path = pathlib.Path(r"test\req.bin")
-    payload = path.read_bytes()
-    vins = Video()
-    vins.parse_payload(payload)
+def subtitle():
+    pid = 712346749
+    oid = 240156492
+    resp = Subtitle().request(pid, oid, stype=1)
+    print(resp)
 
-def main():
-    epid = 341988
-    cid = 240156492
-    ins = Video()
-    resp = ins.request(epid, cid, qn=120)
+def video():
+    epid = 342547
+    cid = 239158825
+    resp = Video().request(epid, cid, qn=120)
+    print(resp)
 
 if __name__ == "__main__":
-    main()
-    # test_payload()
-    
-# python -m grpc_tools.protoc -I header --python_out=header header\metadata.proto
-# python -m grpc_tools.protoc -I header --decode Metadata metadata.proto < test.bin
-# https://stackoverflow.com/questions/35049657/how-to-decode-binary-raw-google-protobuf-data
-# https://developers.google.com/protocol-buffers/docs/proto
+    video()
+    subtitle()
