@@ -1,7 +1,7 @@
 '''
 作者: weimo
 创建日期: 2020-10-08 15:44:34
-上次编辑时间: 2020-10-09 14:52:13
+上次编辑时间: 2020-10-10 09:17:42
 一个人的命运啊,当然要靠自我奋斗,但是...
 '''
 
@@ -86,6 +86,7 @@ class Video(Service):
         except Exception as e:
             print(f"error --> {e}")
             return
+        # print(r.content)
         resp = self.slice_message(r.content)
         self.parse_reply(resp)
         return resp

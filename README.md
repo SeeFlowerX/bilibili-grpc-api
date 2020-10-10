@@ -2,7 +2,7 @@
 
 bilibili grpc相关的api请求，仅作研究学习。
 
-鉴权参数：identify_v1和buvid，如需使用请在cofig.py中设置。
+鉴权参数：identify_v1和buvid，如需使用请在config.py中设置。
 
 # 使用
 
@@ -44,8 +44,6 @@ bilibili grpc相关的api请求，仅作研究学习。
 ## 测试请求视频
 
 > python run.py
-
-会输出结果并将结果保存到`resp.bin`文件中
 
 # 解析效果
 
