@@ -51,8 +51,14 @@ bilibili grpc相关的api请求，仅作研究学习。
 
 返回数据proto文件构成复杂，有需要可以参考上面的文章自行编写proto文件。
 
-![视频请求返回解析效果-头部](/images/video_resp_1.png)
+- 视频请求和返回解析
+
+![视频请求payload解析效果](/images/video_req_1.png)
+![视频请求返回解析效果](/images/video_resp.png)
 ![视频请求返回解析效果-末尾](/images/video_resp_2.png)
+
+- 字幕请求返回解析
+
 ![字幕请求返回解析](/images/subtitle_resp.png)
 
 # 参考
